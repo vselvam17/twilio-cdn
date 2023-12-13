@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "downlevelIteration": true,
+    "importHelpers": true,
     "target": "es2021",
     "module": "es2020",
     "lib": ["es2021", "DOM", "DOM.Iterable"],
@@ -27,8 +31,8 @@
         "strict": true
       }
     ],
-    "types": ["mocha"]
+    "types": ["mocha","node"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts","src/**/*.js"],
   "exclude": []
 }

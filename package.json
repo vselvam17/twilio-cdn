@@ -41,7 +41,8 @@
   "author": "Google LLC",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "lit": "^3.0.0"
+    "lit": "^3.0.0",
+    "@twilio/conversations": "2.1.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
@@ -50,13 +51,13 @@
     "@open-wc/testing": "^3.1.5",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^5.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
-    "@typescript-eslint/parser": "^5.25.0",
     "@web/dev-server": "^0.1.31",
     "@web/dev-server-legacy": "^1.0.0",
     "@web/test-runner": "^0.15.0",
     "@web/test-runner-playwright": "^0.9.0",
     "@webcomponents/webcomponentsjs": "^2.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "eslint": "^8.15.0",
     "lit-analyzer": "^1.2.1",
     "prettier": "^2.6.2",
