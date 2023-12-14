@@ -6,13 +6,11 @@
 
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import { conversations } from './cdn_bundles/twilio-conversation-esm';
-import './cdn_bundles/twilio-conversation'
+import './cdn_bundles/twilio-conversation';
 
-/** TODO - Uncomment the below code to check if the ESM import works or not **
+/** TODO - Uncomment the below code one after the other to verify the other scenarios **
  *
+ * import { conversations } from './cdn_bundles/twilio-conversation-esm';
  * import { Client } from '@twilio/conversations';
  *
  */
@@ -47,23 +45,30 @@ export class MyElement extends LitElement {
   /**
    * The number of times the button has been clicked.
    */
-  @property({type: Boolean})
-  status = false;
+  @property({type: String})
+  cdnStatus = '';
+
+  @property({type: String})
+  npmStatus = '';
+
+  @property({type: String})
+  esmStatus = '';
 
   override render() {
     return html`
       <h1>${this.sayHello(this.name)}!</h1>
-      <button @click=${this._onClickWithCDN_ESM} part="button">
-        Initialise twilio client with CDN: ${this.status}
-      </button>
       
       <button @click=${this._onClickWithCDN_CommonJS} part="button">
-        Initialise twilio client with NPM - CommonJS format: ${this.status}
+        Initialise twilio client with NPM - CommonJS format: ${this.npmStatus}
+      </button>
+
+      <!--<button @click=${this._onClickWithCDN_ESM} part="button">
+        Initialise twilio client with CDN: ${this.cdnStatus}
       </button>
 
       <button @click=${this._onClickWithNPMES} part="button">
-        Initialise twilio client with NPM - ESM format: ${this.status}
-      </button>
+        Initialise twilio client with NPM - ESM format: ${this.esmStatus}
+      </button>-->
       <slot></slot>
     `;
   }
@@ -74,10 +79,10 @@ export class MyElement extends LitElement {
     const client = new conversations.Client.create('', { region: 'ie1', twilsock: {} }); // eslint-disable-line new-cap
     client.then(() => {
       console.log(`time taken for registering twilio client : ${new Date().getTime() - clientCreateStartTime}`);
-      this.status = true;
-    }).catch(() => {
+      this.cdnStatus = `Twilio client initialisation success`;
+    }).catch((err: any) => {
       console.log(`Twilio client initialisation failed`);
-      this.status = false;
+      this.cdnStatus = err;
     });
     this.dispatchEvent(new CustomEvent('count-changed'));
   }
@@ -89,10 +94,10 @@ export class MyElement extends LitElement {
     const client = new window.Twilio.Conversations.Client.create('', { region: 'ie1', twilsock: {} }); // eslint-disable-line new-cap
     client.then(() => {
       console.log(`time taken for registering twilio client : ${new Date().getTime() - clientCreateStartTime}`);
-      this.status = true;
-    }).catch(() => {
+      this.npmStatus = `Twilio client initialisation success`;
+    }).catch((err: any) => {
       console.log(`Twilio client initialisation failed`);
-      this.status = false;
+      this.npmStatus = err;
     });
 
     this.dispatchEvent(new CustomEvent('count-changed'));
@@ -104,10 +109,10 @@ export class MyElement extends LitElement {
     const client = new Client.create('', { region: 'ie1', twilsock: {} }); // eslint-disable-line new-cap
     client.then(() => {
       console.log(`time taken for registering twilio client : ${new Date().getTime() - clientCreateStartTime}`);
-      this.status = true;
-    }).catch(() => {
+      this.esmStatus = `Twilio client initialisation success`;
+    }).catch((err: any) => {
       console.log(`Twilio client initialisation failed`);
-      this.status = false;
+      this.esmStatus = err;
     });
 
     this.dispatchEvent(new CustomEvent('count-changed'));
