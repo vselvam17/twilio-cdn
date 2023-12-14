@@ -1,26 +1,32 @@
-# LitElement TypeScript starter
+# Twilio Client Initialisation
 
-This project includes a sample component using LitElement with TypeScript.
+This project includes different scenarios to connect to twilio client
 
-This template is generated from the `lit-starter-ts` package in [the main Lit
-repo](https://github.com/lit/lit). Issues and PRs for this template should be
-filed in that repo.
+Current Situation:
 
-## About this release
+1. We are tweaking the CDN bundles by exporting a variable named 'conversations' to make it more used as a ESM, this way the issue is addressed
+   But this is not recommended approach as we shouldn't tweak the core and sometimes we get random issues with chat
 
-This is a pre-release of Lit 3.0, the next major version of Lit.
+Failure Scenarios:
 
-Lit 3.0 has very few breaking changes from Lit 2.0:
+1. We have tried the original CDN bundle comes in CommonJS format and can't be used directly as specified in the documentation below,
+   https://www.npmjs.com/package/@twilio/conversations/v/2.1.0
 
-- Drops support for IE11
-- Published as ES2021
-- Removes a couple of deprecated Lit 1.x APIs
+   Added these scenairos in the code, so that when you run the application you could see the errors listed
 
-Lit 3.0 should require no changes to upgrade from Lit 2.0 for the vast majority of users. Once the full release is published, most apps and libraries will be able to extend their npm version ranges to include both 2.x and 3.x, like `"^2.7.0 || ^3.0.0"`.
+2. We also tried using the @twilio/conversations 2.1.0 using the NPM package as is specified in the ESM format as per the documentation below,
+   https://www.npmjs.com/package/@twilio/conversations/v/2.1.0
 
-Lit 2.x and 3.0 are _interoperable_: templates, base classes, directives, decorators, etc., from one version of Lit will work with those from another.
+   This way the code can't recognise the Client library being imported within the code
 
-Please file any issues you find on our [issue tracker](https://github.com/lit/lit/issues).
+   
+Expectation:
+
+1. Ideal expectation is we need to get rid of the CDN bundles of the usage of @twilio/conversations
+
+
+**PS: we also tried the same steps with the latest library versions of @twilio/conversations, still we receive the same error.
+**   
 
 ## Setup
 
