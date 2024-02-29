@@ -8,6 +8,9 @@ import summary from 'rollup-plugin-summary';
 import {terser} from 'rollup-plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
+import polyfill from 'rollup-plugin-polyfill-node';
 
 export default {
   input: 'my-element.js',
@@ -21,8 +24,16 @@ export default {
     }
   },
   plugins: [
+    commonjs({
+      include: 'node_modules/**',
+    }),
+    json(),
+    polyfill({
+      preferBuiltins: false
+    }),
     replace({'Reflect.decorate': 'undefined'}),
     resolve(),
+   
     /**
      * This minification setup serves the static site generation.
      * For bundling and minification, check the README.md file.
@@ -38,5 +49,6 @@ export default {
       },
     }),
     summary(),
+   
   ],
 };
