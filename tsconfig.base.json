@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "baseUrl": ".",
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "lib": [
+      "es2018",
+      "es2015",
+      "es2017",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "module": "esnext",
+    "declaration": true,
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "plugins": [
+      {
+        "name": "typescript-lit-html-plugin"
+      }
+    ],
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": true,
+    "target": "es2018",
+    "traceResolution": false,
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/ing-web"
+    ],
+    "outDir": ".",
+    "skipLibCheck": true,
+  }
+}

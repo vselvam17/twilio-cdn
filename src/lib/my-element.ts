@@ -6,7 +6,7 @@
 
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import './cdn_bundles/twilio-conversation';
+import '../cdn_bundles/twilio-conversation';
 
 /** TODO - Uncomment the below code one after the other to verify the other scenarios **
  *

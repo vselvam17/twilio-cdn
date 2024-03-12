@@ -1,38 +1,22 @@
 {
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "index.ts",
+    "src/**/*.ts",
+    "src/lib/**/*.d.ts",
+    "src/**/*.js",
+    "src/**/*.json"
+  ],
+  "exclude": [
+    "code_coverage/**",
+    "node_modules",
+    "lib/**",
+    "**/*.spec.ts"
+  ],
   "compilerOptions": {
-    "allowJs": true,
-    "alwaysStrict": true,
-    "downlevelIteration": true,
-    "importHelpers": true,
-    "target": "es2021",
-    "module": "es2020",
-    "lib": ["es2021", "DOM", "DOM.Iterable"],
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "inlineSources": true,
-    "outDir": "./",
-    "rootDir": "./src",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitOverride": true,
-    "plugins": [
-      {
-        "name": "ts-lit-plugin",
-        "strict": true
-      }
-    ],
-    "types": ["mocha","node"]
-  },
-  "include": ["src/**/*.ts","src/**/*.js"],
-  "exclude": []
+    "resolveJsonModule": true,
+    "declaration": false,
+    "sourceMap": false,
+    "emitDeclarationOnly": false
+  }
 }

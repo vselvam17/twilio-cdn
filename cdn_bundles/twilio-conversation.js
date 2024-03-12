@@ -1,132 +1,4 @@
 "use strict";
-/*
-@license
-The following license applies to all parts of this software except as
-documented below.
-
-    Copyright (c) 2019, Twilio, inc.
-    All rights reserved.
-
-    Redistribution and use in source and binary forms, with or without
-    modification, are permitted provided that the following conditions are
-    met:
-
-      1. Redistributions of source code must retain the above copyright
-         notice, this list of conditions and the following disclaimer.
-
-      2. Redistributions in binary form must reproduce the above copyright
-         notice, this list of conditions and the following disclaimer in
-         the documentation and/or other materials provided with the
-         distribution.
-
-      3. Neither the name of Twilio nor the names of its contributors may
-         be used to endorse or promote products derived from this software
-         without specific prior written permission.
-
-    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-    A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-    HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-    LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-This software includes javascript-state-machine under the following license.
-
-    Copyright (c) 2012, 2013, 2014, 2015, Jake Gordon and contributors
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-
-This software includes loglevel under the following license.
-
-    Copyright (c) 2013 Tim Perry
-
-    Permission is hereby granted, free of charge, to any person
-    obtaining a copy of this software and associated documentation
-    files (the "Software"), to deal in the Software without
-    restriction, including without limitation the rights to use,
-    copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the
-    Software is furnished to do so, subject to the following
-    conditions:
-
-    The above copyright notice and this permission notice shall be
-    included in all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-    OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-    WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-    OTHER DEALINGS IN THE SOFTWARE.
-
-This software includes q under the following license.
-
-    Copyright 2009â€“2014 Kristopher Michael Kowal. All rights reserved.
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to
-    deal in the Software without restriction, including without limitation the
-    rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-    sell copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in
-    all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-    IN THE SOFTWARE.
-
-This software includes platform.js under the following license.
-
-    Copyright 2014 Benjamin Tan <https://d10.github.io/>
-    Copyright 2011-2015 John-David Dalton <http://allyoucanleet.com/>
-
-    Permission is hereby granted, free of charge, to any person obtaining
-    a copy of this software and associated documentation files (the
-    "Software"), to deal in the Software without restriction, including
-    without limitation the rights to use, copy, modify, merge, publish,
-    distribute, sublicense, and/or sell copies of the Software, and to
-    permit persons to whom the Software is furnished to do so, subject to
-    the following conditions:
-
-    The above copyright notice and this permission notice shall be
-    included in all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-    LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-*/
 this.Twilio = this.Twilio || {}, this.Twilio.Conversations = function (e) {
     "use strict";
     var t = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {};
@@ -1238,17 +1110,6 @@ this.Twilio = this.Twilio || {}, this.Twilio.Conversations = function (e) {
     }
     else
         n = r.apply(this, arguments); return uy(this, n); }; }
-    /*
-        @license
-        Copyright (c) 2021 Twilio Inc.
-
-        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-        */
     Object.defineProperty(Zv, "__esModule", { value: !0 }), cy.prototype = Object.create(null), ly.EventEmitter = ly, ly.usingDomains = !1, ly.prototype.domain = void 0, ly.prototype._events = void 0, ly.prototype._maxListeners = void 0, ly.defaultMaxListeners = 10, ly.init = function () { this.domain = null, ly.usingDomains && undefined.active, this._events && this._events !== Object.getPrototypeOf(this)._events || (this._events = new cy, this._eventsCount = 0), this._maxListeners = this._maxListeners || void 0; }, ly.prototype.setMaxListeners = function (e) { if ("number" != typeof e || e < 0 || isNaN(e))
         throw new TypeError('"n" argument must be a positive number'); return this._maxListeners = e, this; }, ly.prototype.getMaxListeners = function () { return fy(this); }, ly.prototype.emit = function (e) { var t, n, r, i, a, s, o, u = "error" === e; if (s = this._events)
         u = u && null == s.error;
@@ -5288,20 +5149,6 @@ this.Twilio = this.Twilio || {}, this.Twilio.Conversations = function (e) {
             Object.defineProperty(t, n, r.get ? r : { enumerable: !0, get: function () { return e[n]; } });
         } })), t.default = e, Object.freeze(t); }
         var l = u(n), f = u(r), d = u(i), p = c(a);
-        /*! *****************************************************************************
-              Copyright (c) Microsoft Corporation.
-
-              Permission to use, copy, modify, and/or distribute this software for any
-              purpose with or without fee is hereby granted.
-
-              THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-              REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-              AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-              INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-              LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-              OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-              PERFORMANCE OF THIS SOFTWARE.
-              ***************************************************************************** */
         function h(e, t, n, r) { var i, a = arguments.length, s = a < 3 ? t : null === r ? r = Object.getOwnPropertyDescriptor(t, n) : r; if ("object" === ("undefined" == typeof Reflect ? "undefined" : Ca(Reflect)) && "function" == typeof Reflect.decorate)
             s = Reflect.decorate(e, t, n, r);
         else
@@ -6646,4 +6493,3 @@ this.Twilio = this.Twilio || {}, this.Twilio.Conversations = function (e) {
                 return new PushNotification({ title: a.twi_title || null, body: a.twi_body || null, sound: a.twi_sound || null, badge: null, action: a.twi_action || null, type: a.twi_message_type, data: s });
             } throw new Error("Provided push notification payload is not Programmable Chat notification"); } }]), Client; }(_y), ja(nA, "version", fA), ja(nA, "supportedPushChannels", ["fcm", "apn"]), ja(nA, "supportedPushDataFields", { conversation_sid: "conversationSid", message_sid: "messageSid", message_index: "messageIndex" }), ja(nA, "conversationAdded", "conversationAdded"), ja(nA, "conversationJoined", "conversationJoined"), ja(nA, "conversationLeft", "conversationLeft"), ja(nA, "conversationRemoved", "conversationRemoved"), ja(nA, "conversationUpdated", "conversationUpdated"), ja(nA, "participantJoined", "participantJoined"), ja(nA, "participantLeft", "participantLeft"), ja(nA, "participantUpdated", "participantUpdated"), ja(nA, "messageAdded", "messageAdded"), ja(nA, "messageRemoved", "messageRemoved"), ja(nA, "messageUpdated", "messageUpdated"), ja(nA, "tokenAboutToExpire", "tokenAboutToExpire"), ja(nA, "tokenExpired", "tokenExpired"), ja(nA, "typingEnded", "typingEnded"), ja(nA, "typingStarted", "typingStarted"), ja(nA, "pushNotification", "pushNotification"), ja(nA, "userSubscribed", "userSubscribed"), ja(nA, "userUnsubscribed", "userUnsubscribed"), ja(nA, "userUpdated", "userUpdated"), ja(nA, "stateChanged", "stateChanged"), ja(nA, "connectionStateChanged", "connectionStateChanged"), ja(nA, "connectionError", "connectionError"), iA = rA), wl([Xv(Vv), xl("design:type", Function), xl("design:paramtypes", [String]), xl("design:returntype", Promise)], e.Client.prototype, "updateToken", null), wl([Xv(Vv), xl("design:type", Function), xl("design:paramtypes", [String]), xl("design:returntype", Promise)], e.Client.prototype, "getConversationBySid", null), wl([Xv(Vv), xl("design:type", Function), xl("design:paramtypes", [String]), xl("design:returntype", Promise)], e.Client.prototype, "getConversationByUniqueName", null), wl([Xv(["undefined", Kv("conversation options", { friendlyName: ["string", "undefined"], isPrivate: ["boolean", "undefined"], uniqueName: ["string", "undefined"] })]), xl("design:type", Function), xl("design:paramtypes", [Object]), xl("design:returntype", Promise)], e.Client.prototype, "createConversation", null), wl([Xv($v("fcm", "apn"), "string"), xl("design:type", Function), xl("design:paramtypes", [String, String]), xl("design:returntype", Promise)], e.Client.prototype, "setPushRegistrationId", null), wl([Xv($v("fcm", "apn")), xl("design:type", Function), xl("design:paramtypes", [String]), xl("design:returntype", Promise)], e.Client.prototype, "unsetPushRegistrationId", null), wl([Xv($v("fcm", "apn"), Vv), xl("design:type", Function), xl("design:paramtypes", [String, String]), xl("design:returntype", Promise)], e.Client.prototype, "removePushRegistrations", null), wl([Xv(Hv), xl("design:type", Function), xl("design:paramtypes", [Object]), xl("design:returntype", Promise)], e.Client.prototype, "handlePushNotification", null), wl([Xv(Vv), xl("design:type", Function), xl("design:paramtypes", [String]), xl("design:returntype", Promise)], e.Client.prototype, "getUser", null), wl([Xv("string", ["undefined", Hv]), xl("design:type", Function), xl("design:paramtypes", [String, Object]), xl("design:returntype", Promise)], e.Client, "create", null), wl([Qv(Hv), xl("design:type", Function), xl("design:paramtypes", [Object]), xl("design:returntype", PushNotification)], e.Client, "parsePushNotification", null), e.Client = iA = wl([Yv(Vv, [Hv, "undefined"]), xl("design:paramtypes", [String, Object])], e.Client), e.AggregatedDeliveryReceipt = AggregatedDeliveryReceipt, e.Conversation = Conversation, e.DetailedDeliveryReceipt = DetailedDeliveryReceipt, e.Media = Media, e.Message = Message, e.MessageBuilder = CP, e.NotificationTypes = ag, e.Participant = Participant, e.PushNotification = PushNotification, e.RestPaginator = wP, e.UnsentMessage = OP, e.User = User, Object.defineProperty(e, "__esModule", { value: !0 }), e;
 }({});
-//# sourceMappingURL=twilio-conversation.js.map
